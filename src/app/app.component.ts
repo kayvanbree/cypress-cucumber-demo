@@ -11,6 +11,7 @@ export class AppComponent {
   output = '';
 
   doStuff(event) {
-    this.output = event.target.value;
+    console.log('Doing stuff!');
+    this.output = this.input;
   }
 }

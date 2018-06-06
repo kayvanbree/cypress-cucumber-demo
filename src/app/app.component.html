@@ -5,6 +5,8 @@
   </h1>
 
   <span>Write something and hit the button!</span>
-  <input [(ngModel)]="input" /> <button (click)="doStuff($event)">HIT ME!</button>
+  <input class="input" [(ngModel)]="input" />
+  <button class="hit-me" (click)="doStuff($event)">HIT ME!</button>
+  <div class="output">{{output}}</div>
 </div>
 

@@ -6,5 +6,21 @@ given('I am on the homepage', () => {
 });
 
 then('I see {string} in the title', (title) => {
-  cy.get('h1.title').should('include', title);
+  cy.get('.title')
+    .should('include', title);
+});
+
+when('I type {string} in the textbox', (input) => {
+  cy.get('.input')
+    .type(input);
+});
+
+when('I click HIT ME!', () => {
+  cy.get('.hit-me')
+    .click();
+});
+
+then('the label says {string}', (output) => {
+  cy.get('.output')
+    .should('contain', output);
 });
